@@ -7,6 +7,39 @@
     <!-- Tablero del juego -->
     <Grid Padding="16" RowSpacing="12"
           RowDefinitions="Auto,*">
+
+        <!-- Barra superior & Botones -->
+        <Grid ColumnDefinitions="*,Auto,Auto" ColumnSpacing="12">
+            <Label x:Name="ScoreLabel"
+                   Text="Score: 0"
+                   TextColor="White"
+                   FontSize="18"
+                   VerticalOptions="Center"/>
+
+            <Button Text="Star" Clicked="OnStartClicked"/>
+            <Button Text="Star" Clicked="OnStartClicked"/>
+
+        </Grid>
         
-        
-        /ContentPage>
+      <!-- Área del juego -->
+        <Grid Grid.Row="1" ColumnDefinitions="*,Auto" ColumnSpacing="16">
+           
+            <!-- Tablero -->
+            <Frame Padding="8"
+                   BackgroundColor="1C1C1C"
+                   BorderColor="#333"
+                   CornerRadius="12"
+                   HasShadow="False"
+                 <Grid x:Name="BoardGrid"/>
+            </Frame>
+            
+                <!--Controles-->
+            <VerticalStackLayout Spacing="10" VerticalOptions="Center">
+                <Button Text="⬅️"Clicked="OnLeftClicked"/>
+                <Button Text="➡️" Clicked="OnRightClicked"/>
+                <Button Text="⬇️" Clicked="OnDownClicked"/> +
+            </VerticalStackLayout>
+        </Grid>
+   </Grid>
+
+ </ContentPage>
