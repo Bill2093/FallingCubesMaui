@@ -1,4 +1,4 @@
-<h3 📷 Capturas</h3>
+### 📷 Capturas
 
 <p align="center">
   <strong>Juego Corriendo</strong><br>
