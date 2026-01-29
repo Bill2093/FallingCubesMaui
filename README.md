@@ -1,7 +1,5 @@
 ### 📸 Capturas
 
-### 📷 Capturas
-
 ![Juego Corriendo](Capturas/pantalla1.webp)
 
 ![Game Over, mensaje](Capturas/pantalla2.webp)
