@@ -1,13 +1,16 @@
-### 📷 Capturas
+<h3 align="center">📷 Capturas</h3>
 
-**Juego Corriendo**
+<p align="center">
+  <strong>Juego Corriendo</strong><br>
+  <img src="Capturas/pantalla1.webp" width="400">
+</p>
 
-![Juego Corriendo](Capturas/pantalla1.webp)
+<p align="center">
+  <strong>Game Over, mensaje</strong><br>
+  <img src="Capturas/pantalla2.webp" width="400">
+</p>
 
-**Game Over, mensaje**
-
-![Game Over](Capturas/pantalla2.webp)
-
-**Diseño de Flechas**
-
-![Diseño de Flechas](Capturas/pantalla3.webp)
+<p align="center">
+  <strong>Diseño de Flechas</strong><br>
+  <img src="Capturas/pantalla3.webp" width="400">
+</p>
