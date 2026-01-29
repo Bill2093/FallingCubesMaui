@@ -3,43 +3,88 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FallingCubesMaui.MainPage"
              BackgroundColor="#111">
-    
-    <!-- Tablero del juego -->
+
     <Grid Padding="16" RowSpacing="12"
           RowDefinitions="Auto,*">
 
-        <!-- Barra superior & Botones -->
-        <Grid ColumnDefinitions="*,Auto,Auto" ColumnSpacing="12">
-            <Label x:Name="ScoreLabel"
-                   Text="Score: 0"
-                   TextColor="White"
-                   FontSize="18"
-                   VerticalOptions="Center"/>
+        <!-- Barra superior -->
+        <Grid ColumnDefinitions="*,Auto,Auto,Auto,Auto,Auto"
+      ColumnSpacing="8">
 
-            <Button Text="Star" Clicked="OnStartClicked"/>
-            <Button Text="Star" Clicked="OnStartClicked"/>
+           
+            <Label x:Name="ScoreLabel"
+           Grid.Column="0"
+           Text="Score: 0"
+           TextColor="White"
+           FontSize="18"
+           FontAttributes="Bold"
+           VerticalOptions="Center"/>
+
+            <Button Text="⬅️"
+           Grid.Column="1"
+           Clicked="OnLeftClicked"
+           WidthRequest="56"
+           HeightRequest="56"
+           FontSize="30"
+           Padding="0"
+           CornerRadius="12"
+           BackgroundColor="#3F2DBD"
+           TextColor="White" />
+
+            <Button Text="➡️"
+            Grid.Column="2"
+            Clicked="OnRightClicked"
+            WidthRequest="56"
+            HeightRequest="56"
+            FontSize="30"
+            Padding="0"
+            CornerRadius="12"
+            BackgroundColor="#3F2DBD"
+            TextColor="White" />
+
+            <Button Text="⬇️"
+            Grid.Column="3"
+            Clicked="OnDownClicked"
+            WidthRequest="56"
+            HeightRequest="56"
+            FontSize="30"
+            Padding="0"
+            CornerRadius="12"
+            BackgroundColor="#3F2DBD"
+            TextColor="White" />
+
+
+          
+            <Button Text="Start"
+            Grid.Column="4"
+            FontSize="15"
+            Clicked="OnStartClicked"
+            Padding="12,6"/>
+            
+
+           
+            <Button Text="Reset"
+            Grid.Column="5"
+            FontSize="15"
+            Clicked="OnResetClicked"
+            Padding="12,6"/>
 
         </Grid>
-        
-      <!-- Área del juego -->
+
+
+       
         <Grid Grid.Row="1" ColumnDefinitions="*,Auto" ColumnSpacing="16">
+
            
-            <!-- Tablero -->
             <Frame Padding="8"
-                   BackgroundColor="1C1C1C"
+                   BackgroundColor="#1C1C1C"
                    BorderColor="#333"
                    CornerRadius="12"
-                   HasShadow="False"
-                 <Grid x:Name="BoardGrid"/>
+                   HasShadow="False">
+                <Grid x:Name="BoardGrid"/>
             </Frame>
-            
-                <!--Controles-->
-            <VerticalStackLayout Spacing="10" VerticalOptions="Center">
-                <Button Text="⬅️"Clicked="OnLeftClicked"/>
-                <Button Text="➡️" Clicked="OnRightClicked"/>
-                <Button Text="⬇️" Clicked="OnDownClicked"/> +
-            </VerticalStackLayout>
-        </Grid>
-   </Grid>
 
- </ContentPage>
+        </Grid>
+
+    </Grid>
+</ContentPage>
