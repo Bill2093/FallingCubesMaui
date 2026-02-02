@@ -6,7 +6,7 @@ public partial class MainPage : ContentPage
 {
     const int Rows = 20;
     const int Cols = 10;
-
+    //arreglo (matriz) bidimensional
     readonly int[,] board = new int[Rows, Cols];
 
     readonly BoxView[,] cells = new BoxView[Rows, Cols];
@@ -17,9 +17,11 @@ public partial class MainPage : ContentPage
     int score = 0;
 
     readonly System.Timers.Timer timer;
-
+    // pausa del juego
     bool running = false;
 
+
+    // iniciador del juego
     public MainPage()
     {
         InitializeComponent();
@@ -33,7 +35,7 @@ public partial class MainPage : ContentPage
             MainThread.BeginInvokeOnMainThread(GameTick);
         };
     }
-
+    // filas & columnas y cuadro del juego
     void BuildBoardUI()
     {
         BoardGrid.RowDefinitions.Clear();
@@ -71,7 +73,7 @@ public partial class MainPage : ContentPage
 
         Redraw();
     }
-
+    // relleno de celdas o pinta los cubos que van callendo
     void Redraw()
     {
 
@@ -91,7 +93,7 @@ public partial class MainPage : ContentPage
 
         ScoreLabel.Text = $"Score: {score}";
     }
-
+    //controles del juego 
     void OnStartClicked(object sender, EventArgs e)
     {
         if (running) return;
@@ -146,7 +148,7 @@ public partial class MainPage : ContentPage
         Redraw();
     }
 
-
+    // movimientos y colisiones
     bool CanMove(int newRow, int newCol)
     {
      
